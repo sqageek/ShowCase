@@ -1,9 +1,17 @@
 <html>
-  <head> 
+  <head>
     <title>Sekhar's Show Case</title>
   </head>
   <body>
     <p> This is my complete dashboard. This shows all my works. </p>
     <p>Thanks for visiting! Keep visiting to see latest updates</p>
+    {% for provider in providersData %}
+      <div>
+        <span>Name: {{ provider.providerName|linebreaksbr }}</span><br/>
+        <span>Url: {{ provider.providerUrl|linebreaksbr }}</span><br/>
+        <span>Registered Email: {{ provider.Email|linebreaksbr }}</span><br/>
+        <span>Password: {{ provider.Password|linebreaksbr }}</span><br/>
+      </div>
+    {% endfor %}
   </body>
 </html>
