@@ -19,7 +19,3 @@ class Course(models.Model):
   courseSummary = models.TextField()
   courseCategory = models.CharField(max_length = 200)
   isDownloaded = models.BooleanField(default = False)
-  
-  def GetProviderName(self):
-    e = Provider.objects.all().values('ProviderID_id')
-    return e.providerName
