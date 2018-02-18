@@ -1,17 +1,22 @@
-<html>
-  <head>
-    <title>Sekhar's Show Case</title>
-  </head>
-  <body>
-    <p> This is my complete dashboard. This shows all my works. </p>
-    <p>Thanks for visiting! Keep visiting to see latest updates</p>
+{% extends 'getvid/base.html' %}
+
+{% block content %}
+    <h3>Providers</h3>
     {% for provider in providersData %}
-      <div>
+      <div class="provider">
         <span>Name: {{ provider.providerName|linebreaksbr }}</span><br/>
         <span>Url: {{ provider.providerUrl|linebreaksbr }}</span><br/>
         <span>Registered Email: {{ provider.Email|linebreaksbr }}</span><br/>
         <span>Password: {{ provider.Password|linebreaksbr }}</span><br/>
       </div>
     {% endfor %}
-  </body>
-</html>
+    <h3>Courses</h3>
+    {% for course in coursesData %}
+      <div class = "course">
+        <span>Name: {{ course.courseName|linebreaksbr }}</span><br/>
+        <span>Author: {{ course.authorName|linebreaksbr }}</span><br/>
+        <span>Url: {{ course.courseUrl|linebreaksbr }}</span><br/>
+        <span>Summary: {{ course.courseSummary|linebreaksbr }}</span><br/><br/>
+      </div>
+    {% endfor %}
+{% endblock %}

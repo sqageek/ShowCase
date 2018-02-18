@@ -1,0 +1,19 @@
+{% load staticfiles %}
+<html>
+  <head>
+    <title>Sekhar's Show Case</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="page-header">
+      <h1><a href="/">Sekhar's Show Case</a></h1>
+    </div>
+    <p> This is my complete dashboard. This shows all my works. </p>
+    <p>Thanks for visiting! Keep visiting to see latest updates</p>
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>

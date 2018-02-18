@@ -8,7 +8,8 @@ from .models import Course
 def index(request):
     #return HttpResponse("Show statistics by Provider, Category.")
     providersData = Provider.objects.values()
-    return render(request, 'getvid/index.html', {'providersData': providersData})
+    coursesData = Course.objects.values()
+    return render(request, 'getvid/index.html', {'providersData': providersData, 'coursesData': coursesData})
     #return render(request, "getvid/index.html",{})
 
 def udemy(request):
